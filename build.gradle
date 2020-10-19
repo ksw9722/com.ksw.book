@@ -32,8 +32,12 @@ repositories {
     mavenCentral()
     jcenter()
 }
-
+//org.springframework.boot:spring-boot-starter-test
 dependencies {
-   compile('org.springframework.boot:spring-boot-starter-web')
+    implementation 'junit:junit:4.12'
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    testImplementation('junit:junit:4.13')
 }
