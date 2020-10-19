@@ -25,7 +25,7 @@ public class ErrorConfig implements ErrorController {
         if(status!=null){
             int statusCode = Integer.valueOf(status.toString());
 
-            if(statusCode == HttpStatus.NOT_FOUND.value()){
+            if(statusCode == 404){
                 return PATH+404;
             }
 

@@ -16,7 +16,10 @@ public class HelloController {
         return "ERROR404!!";
     }
 
-
+    @GetMapping("/error")
+    public String error(){
+        return "Error!@#!!!";
+    }
 
     @GetMapping("/error/500")
     public String error500(){
