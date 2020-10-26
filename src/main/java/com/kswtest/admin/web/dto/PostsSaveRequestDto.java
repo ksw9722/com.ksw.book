@@ -23,4 +23,16 @@ public class PostsSaveRequestDto {
         return Posts.builder().title(title).content(content).author(author).build();
 
     }
+
+    public String getTitle(){
+        return this.title;
+    }
+
+    public String getContent(){
+        return this.content;
+    }
+
+    public String getAuthor(){
+        return this.getAuthor();
+    }
 }
