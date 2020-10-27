@@ -46,7 +46,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
     compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
     compile('org.projectlombok:lombok')
-
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     testImplementation('junit:junit:4.13')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
