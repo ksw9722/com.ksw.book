@@ -1,7 +1,7 @@
 package com.kswtest.admin.config.auth.dto;
 
 import com.kswtest.admin.domain.user.Role;
-import com.kswtest.admin.domain.user.user;
+import com.kswtest.admin.domain.user.kuser;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -32,7 +32,7 @@ public class OAuthAttributes {
         return OAuthAttributes.builder().name((String)attributes.get("name")).email((String)attributes.get("email")).picture((String)attributes.get("picture")).attributes(attributes).nameAttributeKey(userNameAttributeName).build();
     }
 
-    public user toEntity(){
-        return user.builder().name(name).email(email).picture(picture).role(Role.USER).build();
+    public kuser toEntity(){
+        return kuser.builder().name(name).email(email).picture(picture).role(Role.USER).build();
     }
 }

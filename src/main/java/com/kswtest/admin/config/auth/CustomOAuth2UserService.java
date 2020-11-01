@@ -2,7 +2,7 @@ package com.kswtest.admin.config.auth;
 
 import com.kswtest.admin.config.auth.dto.OAuthAttributes;
 import com.kswtest.admin.config.auth.dto.SessionUser;
-import com.kswtest.admin.domain.user.user;
+import com.kswtest.admin.domain.user.kuser;
 import com.kswtest.admin.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -33,15 +33,15 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         OAuthAttributes attributes = OAuthAttributes.of(registrationId,userNameAttributeName,oAuth2User.getAttributes());
 
-        user user = saveOrUpdate(attributes);
+        kuser user = saveOrUpdate(attributes);
         httpSession.setAttribute("user",new SessionUser(user));
 
         return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(user.getRoleKey())),attributes.getAttributes(),attributes.getNameAttributeKey());
 
     }
 
-    private user saveOrUpdate(OAuthAttributes attributes){
-        user user = userRepository.findByEmail(attributes.getEmail()).map(entity->entity.update(attributes.getName(),attributes.getPicture())).orElse(attributes.toEntity());
+    private kuser saveOrUpdate(OAuthAttributes attributes){
+        kuser user = userRepository.findByEmail(attributes.getEmail()).map(entity->entity.update(attributes.getName(),attributes.getPicture())).orElse(attributes.toEntity());
 
         return userRepository.save(user);
     }

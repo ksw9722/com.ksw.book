@@ -1,6 +1,6 @@
 package com.kswtest.admin.config.auth.dto;
 
-import com.kswtest.admin.domain.user.user;
+import com.kswtest.admin.domain.user.kuser;
 import lombok.Getter;
 
 import java.io.Serializable;
@@ -10,7 +10,7 @@ public class SessionUser implements Serializable {
     private String email;
     private String picture;
 
-    public SessionUser(user user){
+    public SessionUser(kuser user){
         this.name = user.getName();
         this.email = user.getEmail();
         this.picture = user.getPicture();
