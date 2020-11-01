@@ -1,6 +1,6 @@
 package com.kswtest.admin.web.dto;
 
-import com.kswtest.admin.domain.Posts.Posts;
+import com.kswtest.admin.domain.Posts.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,8 +19,8 @@ public class PostsSaveRequestDto {
         this.author = author;
     }
 
-    public Posts toEntity(){
-        return Posts.builder().title(title).content(content).author(author).build();
+    public posts toEntity(){
+        return posts.builder().title(title).content(content).author(author).build();
 
     }
 

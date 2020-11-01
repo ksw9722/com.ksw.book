@@ -1,6 +1,6 @@
 package com.kswtest.admin.web.dto;
 
-import com.kswtest.admin.domain.Posts.Posts;
+import com.kswtest.admin.domain.Posts.posts;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -13,7 +13,7 @@ public class PostsListResponseDto {
     private String author;
     private LocalDateTime modifiedDate;
 
-    public PostsListResponseDto(Posts entity){
+    public PostsListResponseDto(posts entity){
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.author = entity.getAuthor();

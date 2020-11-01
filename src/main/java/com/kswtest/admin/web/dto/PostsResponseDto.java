@@ -1,6 +1,6 @@
 package com.kswtest.admin.web.dto;
 
-import com.kswtest.admin.domain.Posts.Posts;
+import com.kswtest.admin.domain.Posts.posts;
 import lombok.Getter;
 
 
@@ -28,7 +28,7 @@ public class PostsResponseDto {
     private String content;
     private String author;
 
-    public PostsResponseDto(Posts entity) {
+    public PostsResponseDto(posts entity) {
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.content = entity.getContent();
